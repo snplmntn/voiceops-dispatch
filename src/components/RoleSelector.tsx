@@ -7,15 +7,15 @@ interface RoleSelectorProps {
 
 export function RoleSelector({ onSelectRole }: RoleSelectorProps) {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6">
       <div className="text-center mb-12 animate-fade-up">
-        <h1 className="text-4xl md:text-5xl font-mono font-bold text-foreground mb-3">
-          <span className="text-accent">Voice</span>Ops
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-mono font-bold text-foreground mb-3">
+          <span className="text-accent">Tick</span>Track
         </h1>
         <p className="text-muted-foreground text-lg">Smart Manufacturing Dispatch</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 w-full max-w-4xl px-2">
         <Button
           variant="role"
           onClick={() => onSelectRole('operations')}

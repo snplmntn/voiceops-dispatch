@@ -66,7 +66,7 @@ export function MaintenanceView({ onBack }: MaintenanceViewProps) {
         onBack={onBack} 
       />
 
-      <main className="flex-1 container mx-auto px-4 py-6">
+      <main className="flex-1 container mx-auto px-3 sm:px-4 py-4 sm:py-6">
         {/* Filter Tabs */}
         <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
           {filters.map(({ key, label, variant }) => (
@@ -95,7 +95,7 @@ export function MaintenanceView({ onBack }: MaintenanceViewProps) {
             <p className="text-sm">All caught up! 🎉</p>
           </div>
         ) : (
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {filteredTickets.map((ticket) => (
               <TicketCard
                 key={ticket.id}

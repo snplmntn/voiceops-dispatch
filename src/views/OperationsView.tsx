@@ -111,7 +111,7 @@ export function OperationsView({ onBack }: OperationsViewProps) {
         onBack={onBack}
       />
 
-      <main className="flex-1 container mx-auto px-4 py-8 flex flex-col items-center">
+      <main className="flex-1 container mx-auto px-3 sm:px-4 py-6 sm:py-8 flex flex-col items-center">
         {/* Voice Button Section */}
         <div className="flex-1 flex flex-col items-center justify-center gap-6 max-w-md w-full">
           {voiceState === "idle" && (

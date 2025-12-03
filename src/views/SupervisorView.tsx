@@ -31,7 +31,7 @@ function MetricCard({
   };
 
   return (
-    <div className="bg-card border border-border rounded-lg p-6">
+    <div className="bg-card border border-border rounded-lg p-4 sm:p-6">
       <div className="flex items-start justify-between mb-4">
         <div className={cn(
           "w-12 h-12 rounded-lg flex items-center justify-center border",
@@ -53,7 +53,7 @@ function MetricCard({
           </div>
         )}
       </div>
-      <p className="text-3xl font-mono font-bold text-foreground">
+      <p className="text-2xl sm:text-3xl font-mono font-bold text-foreground">
         {value}
         {unit && <span className="text-lg text-muted-foreground ml-1">{unit}</span>}
       </p>
@@ -81,9 +81,9 @@ export function SupervisorView({ onBack }: SupervisorViewProps) {
         onBack={onBack} 
       />
 
-      <main className="flex-1 container mx-auto px-4 py-6">
+      <main className="flex-1 container mx-auto px-3 sm:px-4 py-4 sm:py-6">
         {/* Metrics Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8">
           <MetricCard
             title="Active Downtime"
             value={metrics.activeDowntime}
