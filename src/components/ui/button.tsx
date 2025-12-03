@@ -16,7 +16,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-secondary hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         industrial: "bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg shadow-accent/30 font-mono uppercase tracking-wider",
-        role: "bg-card border-2 border-border hover:border-primary hover:bg-secondary flex-col h-auto py-8 px-6 gap-4",
+        role: "bg-card border-2 border-border hover:border-primary hover:bg-secondary flex-col h-auto gap-3",
         success: "bg-success text-success-foreground hover:bg-success/90 shadow-lg shadow-success/20",
       },
       size: {
