@@ -1,13 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react';
+import { RoleSelector } from '@/components/RoleSelector';
+import { OperationsView } from '@/views/OperationsView';
+import { MaintenanceView } from '@/views/MaintenanceView';
+import { SupervisorView } from '@/views/SupervisorView';
+import { TicketProvider } from '@/context/TicketContext';
+
+type Role = 'operations' | 'maintenance' | 'supervisor' | null;
 
 const Index = () => {
+  const [selectedRole, setSelectedRole] = useState<Role>(null);
+
+  const handleBack = () => setSelectedRole(null);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <TicketProvider>
+      <div className="min-h-screen bg-background">
+        {selectedRole === null && (
+          <RoleSelector onSelectRole={setSelectedRole} />
+        )}
+        {selectedRole === 'operations' && (
+          <OperationsView onBack={handleBack} />
+        )}
+        {selectedRole === 'maintenance' && (
+          <MaintenanceView onBack={handleBack} />
+        )}
+        {selectedRole === 'supervisor' && (
+          <SupervisorView onBack={handleBack} />
+        )}
       </div>
-    </div>
+    </TicketProvider>
   );
 };
 
